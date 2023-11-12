@@ -1,0 +1,29 @@
+<div class="row">
+    <div class="offset-4 col-4">
+
+        <main class="form-signin m-auto" data-bs-theme="dark">
+            <form (submit)="ingresoUsuario()">
+
+              <h1 class="h3 mb-3 fw-normal text-center"><i class="fa-solid fa-skull fa-1x" style="color: #ffffff;"></i> Inicie Sesion</h1>
+
+              <div class="form-floating my-3">
+                <input [(ngModel)]="userFormLogin.correo" [ngModelOptions]="{standalone: true}" type="email" class="form-control" id="inputEmail" placeholder="micorreo@example.com">
+                <label for="floatingInput">Correo</label>
+              </div>
+              <div class="form-floating my-3">
+                <input [(ngModel)]="userFormLogin.password" [ngModelOptions]="{standalone: true}" type="password" class="form-control" id="inputpassword" placeholder="Password">
+                <label for="floatingPassword">Contraseña</label>
+              </div>
+
+              <button class="subLetter buttonMenu w-100" type="submit">Ingresar</button>
+
+            </form>
+
+
+            <a routerLink="/registro" class="text-center">no tienes usuario? registrate!</a>
+          </main>
+
+
+    </div>
+
+</div>

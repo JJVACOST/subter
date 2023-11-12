@@ -1,0 +1,30 @@
+<div class="d-flex">
+    <div class="m-3">
+        <input type="text">
+    </div>
+    <div class="m-2">
+        <i class="fa-solid fa-magnifying-glass fa-2x" style="color: #ffffff;"></i>
+    </div>
+
+</div>
+
+<div class="row d-flex justify-content-around">
+
+    <div class="card card-cover overflow-hidden text-bg-dark rounded-4 shadow-lg m-3"
+         *ngFor="let prod of listaProductos"
+         style="background-image: url('{{ prod.urlImg }}'); width: 20rem; height: 20rem; background-size: cover; background-repeat: no-repeat;" >
+        <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1" >
+          <p class="fw-bolder text-black fs-2 rounded-4" style=" opacity: 0.5; background-color: #ffffff; ">{{ prod.nombre }}</p>
+          <ul class="d-flex list-unstyled mt-auto">
+            <li class="me-auto">
+                <button type="button" class="btn btn-dark btn-sm" [routerLink]="['/detalle-producto', prod._id]">Ver Producto</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+</div>
+
+
+
+

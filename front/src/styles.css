@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: subfont;
+    src: url(assets/fonts/plasdrip.ttf);
+}
+
+body{
+    overflow: hidden;
+    background-color: black;
+    color: #FFF;
+}
+
+
+.subLetter {
+    color: #FFF;
+    font-family: 'subfont';
+}

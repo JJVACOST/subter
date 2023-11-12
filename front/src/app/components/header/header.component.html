@@ -1,0 +1,41 @@
+<section class="bg-black">
+    <div class="d-flex justify-content-lg-end justify-content-between ps-5 pt-2 pb-2 pe-5">
+
+        <button class="btn d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"
+            aria-controls="offcanvasExample">
+            <i class="fa-solid fa-bars text-white fa-2x"></i>
+        </button>
+
+        <div class="d-flex">
+            <div class="m-2">
+                <a class="fa-solid fa-cart-shopping fa-2x button"
+                style="color: #ffffff;"
+                title="Ver Carrito" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Tooltip on bottom"
+                routerLink=""></a>
+
+            </div>
+
+            <div class="m-2" >
+                <a class="fa-solid fa-skull fa-2x button"
+                   style="color: #ffffff;"
+                   title="Ingresa" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Tooltip on bottom"
+                   routerLink="/login"></a>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<div class="offcanvas offcanvas-start bg-black" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-header">
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <app-navbar></app-navbar>
+    </div>
+</div>
