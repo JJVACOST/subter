@@ -11,6 +11,7 @@ import { LoginComponent } from './components/login/login.component';
 import { DetalleProductoComponent } from './components/detalle-producto/detalle-producto.component';
 import { Error404Component } from './components/error404/error404.component';
 import { UploadfilesComponent } from './components/uploadfiles/uploadfiles.component';
+import { CarritoComponent } from './components/carrito/carrito.component';
 
 
 const routes: Routes = [
@@ -22,6 +23,7 @@ const routes: Routes = [
     {path:'registro', component:RegisterComponent},
     {path:'crea_prod', canMatch:[guardiaGuard], component:CrearproductosComponent},
     {path:'detalle-producto/:id', component:DetalleProductoComponent},
+    {path:'carrito', component:CarritoComponent},
     {path: '404', component:Error404Component},
     {path: 'subir', component:UploadfilesComponent},
     {path: '**', redirectTo: '404', pathMatch: 'full'}

@@ -19,6 +19,7 @@ import {HttpClientModule} from "@angular/common/http";
 import { DetalleProductoComponent } from './components/detalle-producto/detalle-producto.component';
 import { Error404Component } from './components/error404/error404.component';
 import { UploadfilesComponent } from './components/uploadfiles/uploadfiles.component';
+import { CarritoComponent } from './components/carrito/carrito.component';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import { UploadfilesComponent } from './components/uploadfiles/uploadfiles.compo
     CrearproductosComponent,
     DetalleProductoComponent,
     Error404Component,
-    UploadfilesComponent
+    UploadfilesComponent,
+    CarritoComponent
   ],
   imports: [
     BrowserModule,
