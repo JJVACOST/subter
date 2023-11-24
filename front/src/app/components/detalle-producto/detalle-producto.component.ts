@@ -4,6 +4,9 @@ import { productos } from "src/app/models/productos"
 import { ProductosService } from 'src/app/services/productos.service';
 import { ActivatedRoute, Router } from "@angular/router";
 import Swal from 'sweetalert2'
+import { Store } from '@ngrx/store';
+import { Observable } from 'rxjs';
+import { addCarrito } from 'src/app/redux-carrito/actions.carrito';
 
 @Component({
   selector: 'app-detalle-producto',
@@ -23,9 +26,12 @@ export class DetalleProductoComponent implements OnInit{
     myprice: string =''
     myid: string =''
 
-    detailProds:FormGroup
+    myitem: string =''
 
-    constructor(private _productoService: ProductosService, private fb: FormBuilder, private router: Router, private idProdRoute: ActivatedRoute) {
+    detailProds:FormGroup
+    sc:Observable<any[]>
+
+    constructor(private _productoService: ProductosService, private fb: FormBuilder, private router: Router, private idProdRoute: ActivatedRoute, private store: Store<{sc:any}>) {
         this.detailProds = this.fb.group({
             nombre: ['', Validators.required],
             descripcion: ['', Validators.required],
@@ -35,6 +41,7 @@ export class DetalleProductoComponent implements OnInit{
 
         })
 
+        this.sc = store.select('sc')
 
         this.idprodUrl = this.idProdRoute.snapshot.paramMap.get('id')
 
@@ -62,7 +69,17 @@ export class DetalleProductoComponent implements OnInit{
         })
     }
 
-    agregarCarrito(id:any){}
+    agregarCarrito(product:any){
+        this.myitem = JSON.stringify({'id':this.myid,
+                                      'nombre':this.mynombre,
+                                      'imagen':this.myurlImg,
+                                      'precio':this.myprice
+                                    })
+        console.log(this.myitem)
+
+        this.store.dispatch(addCarrito(product))
+
+    }
 }
 
 

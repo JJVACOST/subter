@@ -14,13 +14,19 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td><img src="producto1.jpg" alt="Producto 1"></td>
-          <td>Producto 1</td>
-          <td>$100</td>
+        <tr *ngFor="let prod of sc | async">
+          <td><img src="{{prod.imagen}}" alt="{{prod.imagen}}" ></td>
+          <td>{{prod.nombre}}</td>
+          <td>{{prod.precio}}</td>
           <td>1</td>
           <td><button>Eliminar</button></td>
         </tr>
       </tbody>
     </table>
+
+    <p *ngFor="let prod of sc | async">
+
+        {{prod}}
+
+    </p>
   </main>

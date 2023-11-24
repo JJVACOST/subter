@@ -20,6 +20,8 @@ import { DetalleProductoComponent } from './components/detalle-producto/detalle-
 import { Error404Component } from './components/error404/error404.component';
 import { UploadfilesComponent } from './components/uploadfiles/uploadfiles.component';
 import { CarritoComponent } from './components/carrito/carrito.component';
+import { StoreModule } from '@ngrx/store';
+import { carritoReducer } from './redux-carrito/carrito.reducer';
 
 
 @NgModule({
@@ -44,7 +46,8 @@ import { CarritoComponent } from './components/carrito/carrito.component';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    StoreModule.forRoot({sc: carritoReducer})
   ],
   providers: [],
   bootstrap: [AppComponent]
