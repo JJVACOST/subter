@@ -10,23 +10,18 @@ import { Observable } from 'rxjs';
 export class CarritoComponent {
 
     sc:Observable<any[]>
-    detalle:any[] = []
+
 
     constructor( private store: Store<{sc:any}>){
 
         this.sc = store.select('sc')
 
-        this.detalle.push((this.sc))
-
-        console.log(this.detalle)
-
+        console.log(this.sc)
 
     }
 
     ngOnInit(): void {
-        this.detalle.forEach(element => {
-          console.log(element, "nuevo")
-        });
+
      }
 
 

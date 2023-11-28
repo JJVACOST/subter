@@ -5,10 +5,16 @@ import { addCarrito, delCarrito } from "./actions.carrito"
 export const initState:any[] = []
 
 
+
 export const carritoReducer = createReducer(
   initState,
     on(addCarrito, (state:any, product:any ) => {
-        console.log(state)
+        console.log('miestado= ',state)
+
+        let misproductos = JSON.parse(JSON.stringify(state))
+
+        console.log('mis prod= ',misproductos)
+
         return [...state, product['0']]
     })
 );

@@ -26,7 +26,7 @@ export class DetalleProductoComponent implements OnInit{
     myprice: string =''
     myid: string =''
 
-    myitem: string =''
+    myitem: any
 
     detailProds:FormGroup
     sc:Observable<any[]>
@@ -63,6 +63,8 @@ export class DetalleProductoComponent implements OnInit{
             this.myprice = data.precio
             this.myid = data._id
 
+            this.myitem = data
+
 
         }, error => {
             this.router.navigate(['/404'])
@@ -70,12 +72,7 @@ export class DetalleProductoComponent implements OnInit{
     }
 
     agregarCarrito(product:any){
-        this.myitem = JSON.stringify({'id':this.myid,
-                                      'nombre':this.mynombre,
-                                      'imagen':this.myurlImg,
-                                      'precio':this.myprice
-                                    })
-        console.log(this.myitem)
+        console.log(product)
 
         this.store.dispatch(addCarrito(product))
 

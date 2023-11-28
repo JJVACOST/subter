@@ -15,7 +15,7 @@
       </thead>
       <tbody>
         <tr *ngFor="let prod of sc | async">
-          <td><img src="{{prod.imagen}}" alt="{{prod.imagen}}" ></td>
+          <td><img src="{{prod.urlImg}}" alt="{{prod.urlImg}}" width="50" height="50"></td>
           <td>{{prod.nombre}}</td>
           <td>{{prod.precio}}</td>
           <td>1</td>
@@ -23,10 +23,4 @@
         </tr>
       </tbody>
     </table>
-
-    <p *ngFor="let prod of sc | async">
-
-        {{prod}}
-
-    </p>
-  </main>
+ </main>
