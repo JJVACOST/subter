@@ -17,8 +17,8 @@
         <tr *ngFor="let prod of sc | async">
           <td><img src="{{prod.urlImg}}" alt="{{prod.urlImg}}" width="50" height="50"></td>
           <td>{{prod.nombre}}</td>
-          <td>{{prod.precio}}</td>
-          <td>1</td>
+          <td>{{prod.precio * prod.cantidad}}</td>
+          <td>{{prod.cantidad}}</td>
           <td><button>Eliminar</button></td>
         </tr>
       </tbody>

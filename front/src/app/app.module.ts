@@ -15,7 +15,7 @@ import { CrearproductosComponent } from './components/crearproductos/crearproduc
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import {HttpClientModule} from "@angular/common/http";
+import { HttpClientModule } from "@angular/common/http";
 import { DetalleProductoComponent } from './components/detalle-producto/detalle-producto.component';
 import { Error404Component } from './components/error404/error404.component';
 import { UploadfilesComponent } from './components/uploadfiles/uploadfiles.component';
