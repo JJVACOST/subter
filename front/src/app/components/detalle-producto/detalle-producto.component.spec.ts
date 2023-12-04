@@ -4,6 +4,13 @@ import { DetalleProductoComponent } from './detalle-producto.component';
 
 import { configureTestingModule } from 'src/app/testing/testing-setup';
 
+//importaciones para ajustar el test
+import { HttpClient } from '@angular/common/http';
+import { of } from 'rxjs';
+import { StoreModule } from '@ngrx/store';
+import { ProductosService } from 'src/app/services/productos.service';
+
+
 describe(`(1) Test del componente "DetalleProductoComponent"`, () => {
   let component: DetalleProductoComponent;
   let fixture: ComponentFixture<DetalleProductoComponent>;
